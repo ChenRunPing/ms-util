@@ -1,0 +1,8 @@
+server:
+  port: 1012
+
+MD5Key: quyiyuandev
+
+crp:
+  log:
+    path: C:/crp-logs
