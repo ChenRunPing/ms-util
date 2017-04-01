@@ -20,7 +20,6 @@ package com.crp.qyUtil;
  * @see 	 
  */
 
-import com.qy.exception.NetServiceException;
 import org.apache.commons.lang.StringUtils;
 import org.apache.http.*;
 import org.apache.http.client.ClientProtocolException;

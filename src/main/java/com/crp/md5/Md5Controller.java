@@ -1,5 +1,6 @@
 package com.crp.md5;
 
+import com.crp.collectUtil.Md5EncodeUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -34,7 +35,7 @@ public class Md5Controller {
     @RequestMapping(value = "/createMd5SignValue", method = RequestMethod.POST)
     public String createMd5SignValue(@RequestBody(required = false) Map map) throws IOException {
         log.info("传入的参数是："+map.toString());
-        String signString = Md5EncodeUtil.createMD5Map(map,MD5Key,charSet);
+        String signString = Md5EncodeUtil.createMD5Map(map, MD5Key, charSet);
         log.info("生成的加签秘钥是："+signString);
         return signString;
 

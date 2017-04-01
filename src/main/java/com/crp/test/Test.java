@@ -1,6 +1,7 @@
 package com.crp.test;
 
-import com.crp.qyUtil.DateUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * ms-util - com.crp.test
@@ -11,9 +12,20 @@ import com.crp.qyUtil.DateUtil;
 public class Test {
 
     public static void  main(String args[]){
-        String str = "1,2,3";
-        String[] ss = str.split(",");
-        System.out.println(ss.toString());
+        String str = "ww";
+      String s[] = str.split(",");
+        System.out.println(s[0]);
 
     }
+
+
+    private static  boolean validateNumber(String str) {
+        Pattern pattern = Pattern.compile("[0-9]*");
+        Matcher isNum = pattern.matcher(str);
+        if( !isNum.matches() ){
+            return false;
+        }
+        return true;
+    }
+
 }

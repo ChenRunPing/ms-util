@@ -1,7 +1,7 @@
 package com.crp.dataTypeConversion;
 
+import com.crp.qyUtil.JSONUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.qy.util.JsonUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -32,7 +32,7 @@ public class DataTransformUtils {
      */
     public static String mapToString(Map map){
 
-        String result = JsonUtil.toJSONString(map);
+        String result = JSONUtil.toJSONString(map);
         return result;
     }
 

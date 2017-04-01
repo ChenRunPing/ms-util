@@ -1,4 +1,4 @@
-package com.crp.md5;
+package com.crp.collectUtil;
 
 import lombok.extern.slf4j.Slf4j;
 
