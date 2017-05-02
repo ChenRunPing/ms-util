@@ -12,20 +12,14 @@ import java.util.regex.Pattern;
 public class Test {
 
     public static void  main(String args[]){
+
         String str = "ww";
-      String s[] = str.split(",");
+        String s[] = str.split(",");
         System.out.println(s[0]);
 
+
     }
 
 
-    private static  boolean validateNumber(String str) {
-        Pattern pattern = Pattern.compile("[0-9]*");
-        Matcher isNum = pattern.matcher(str);
-        if( !isNum.matches() ){
-            return false;
-        }
-        return true;
-    }
 
 }
