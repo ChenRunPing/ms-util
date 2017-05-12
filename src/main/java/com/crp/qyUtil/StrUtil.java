@@ -87,18 +87,18 @@ public class StrUtil {
 	}
 
 	/**
-	 * 判断一个字符串是否为空，空格作非空处理。 StringUtils.isEmpty(null) = true
-	 * StringUtils.isEmpty("") = true StringUtils.isEmpty(" ") = false
-	 * StringUtils.isEmpty("bob") = false StringUtils.isEmpty(" bob ") = false
+	 * 判断一个字符串是否为空，空格作非空处理。 Utils.isEmpty(null) = true
+	 * Utils.isEmpty("") = true Utils.isEmpty(" ") = false
+	 * Utils.isEmpty("bob") = false Utils.isEmpty(" bob ") = false
 	 */
 	public static boolean isEmpty(String str) {
 		return ((str == null) || (str.length() == 0));
 	}
 
 	/**
-	 * 判断一个字符串是否非空，空格作非空处理. StringUtils.isNotEmpty(null) = false
-	 * StringUtils.isNotEmpty("") = false StringUtils.isNotEmpty(" ") = true
-	 * StringUtils.isNotEmpty("bob") = true StringUtils.isNotEmpty(" bob ") =
+	 * 判断一个字符串是否非空，空格作非空处理. Utils.isNotEmpty(null) = false
+	 * Utils.isNotEmpty("") = false Utils.isNotEmpty(" ") = true
+	 * Utils.isNotEmpty("bob") = true Utils.isNotEmpty(" bob ") =
 	 * true
 	 */
 	public static boolean isNotEmpty(String str) {
@@ -106,9 +106,9 @@ public class StrUtil {
 	}
 
 	/**
-	 * 判断一个字符串是否非空，空格作空处理. StringUtils.isNotBlank(null) = false
-	 * StringUtils.isNotBlank("") = false StringUtils.isNotBlank(" ") = false
-	 * StringUtils.isNotBlank("bob") = true StringUtils.isNotBlank(" bob ") =
+	 * 判断一个字符串是否非空，空格作空处理. Utils.isNotBlank(null) = false
+	 * Utils.isNotBlank("") = false Utils.isNotBlank(" ") = false
+	 * Utils.isNotBlank("bob") = true Utils.isNotBlank(" bob ") =
 	 * true
 	 */
 	public static boolean isNotBlank(String str) {
@@ -290,37 +290,37 @@ public class StrUtil {
 	}
 
 	/**
-	 * 去掉一个字符串中的空格，有非空判断处理； StringUtils.trim(null) = null StringUtils.trim("") =
-	 * "" StringUtils.trim(" ") = "" StringUtils.trim(" abc ") = "abc"
+	 * 去掉一个字符串中的空格，有非空判断处理； Utils.trim(null) = null Utils.trim("") =
+	 * "" Utils.trim(" ") = "" Utils.trim(" abc ") = "abc"
 	 */
 	public static String trim(String str) {
 		return ((str == null) ? null : str.trim());
 	}
 
 	/**
-	 * 判断两个字符串是否相等，有非空处理。 StringUtils.equals(null, null) = true
-	 * StringUtils.equals(null, "abc") = false
+	 * 判断两个字符串是否相等，有非空处理。 Utils.equals(null, null) = true
+	 * Utils.equals(null, "abc") = false
 	 */
 	public static boolean equals(String str1, String str2) {
 		return ((str1 == null) ? (str2 == null) : str1.equals(str2));
 	}
 
 	/**
-	 * 判断两个字符串是否相等，有非空处理。忽略大小写 StringUtils.equalsIgnoreCase(null, null) = true
-	 * StringUtils.equalsIgnoreCase(null, "abc") = false
-	 * StringUtils.equalsIgnoreCase("abc", null) = false
-	 * StringUtils.equalsIgnoreCase("abc", "ABC") = true
+	 * 判断两个字符串是否相等，有非空处理。忽略大小写 Utils.equalsIgnoreCase(null, null) = true
+	 * Utils.equalsIgnoreCase(null, "abc") = false
+	 * Utils.equalsIgnoreCase("abc", null) = false
+	 * Utils.equalsIgnoreCase("abc", "ABC") = true
 	 */
 	public static boolean equalsIgnoreCase(String str1, String str2) {
 		return ((str1 == null) ? (str2 == null) : str1.equalsIgnoreCase(str2));
 	}
 
 	/**
-	 * 返回要查找的字符串所在位置，有非空处理 StringUtils.indexOf(null, *) = -1
-	 * StringUtils.indexOf(*, null) = -1 StringUtils.indexOf("", "") = 0
-	 * StringUtils.indexOf("aabaabaa", "a") = 0 StringUtils.indexOf("aabaabaa",
-	 * "b") = 2 StringUtils.indexOf("aabaabaa", "ab") = 1
-	 * StringUtils.indexOf("aabaabaa", "") = 0
+	 * 返回要查找的字符串所在位置，有非空处理 Utils.indexOf(null, *) = -1
+	 * Utils.indexOf(*, null) = -1 Utils.indexOf("", "") = 0
+	 * Utils.indexOf("aabaabaa", "a") = 0 Utils.indexOf("aabaabaa",
+	 * "b") = 2 Utils.indexOf("aabaabaa", "ab") = 1
+	 * Utils.indexOf("aabaabaa", "") = 0
 	 */
 	public static int indexOf(String str, String searchStr) {
 		if ((str == null) || (searchStr == null)) {
@@ -331,13 +331,13 @@ public class StrUtil {
 	}
 
 	/**
-	 * 返回要由指定位置开始查找的字符串所在位置，有非空处理 StringUtils.indexOf("aabaabaa", "a", 0) = 0
-	 * StringUtils.indexOf("aabaabaa", "b", 0) = 2
-	 * StringUtils.indexOf("aabaabaa", "ab", 0) = 1
-	 * StringUtils.indexOf("aabaabaa", "b", 3) = 5
-	 * StringUtils.indexOf("aabaabaa", "b", 9) = -1
-	 * StringUtils.indexOf("aabaabaa", "b", -1) = 2
-	 * StringUtils.indexOf("aabaabaa", "", 2) = 2 StringUtils.indexOf("abc", "",
+	 * 返回要由指定位置开始查找的字符串所在位置，有非空处理 Utils.indexOf("aabaabaa", "a", 0) = 0
+	 * Utils.indexOf("aabaabaa", "b", 0) = 2
+	 * Utils.indexOf("aabaabaa", "ab", 0) = 1
+	 * Utils.indexOf("aabaabaa", "b", 3) = 5
+	 * Utils.indexOf("aabaabaa", "b", 9) = -1
+	 * Utils.indexOf("aabaabaa", "b", -1) = 2
+	 * Utils.indexOf("aabaabaa", "", 2) = 2 Utils.indexOf("abc", "",
 	 * 9) = 3
 	 */
 	public static int indexOf(String str, String searchStr, int startPos) {
@@ -353,10 +353,10 @@ public class StrUtil {
 	}
 
 	/**
-	 * 返回指定位置开始的字符串中的所有字符 StringUtils.substring(null, *) = null
-	 * StringUtils.substring("", *) = "" StringUtils.substring("abc", 0) = "abc"
-	 * StringUtils.substring("abc", 2) = "c" StringUtils.substring("abc", 4) =
-	 * "" StringUtils.substring("abc", -2) = "bc" StringUtils.substring("abc",
+	 * 返回指定位置开始的字符串中的所有字符 Utils.substring(null, *) = null
+	 * Utils.substring("", *) = "" Utils.substring("abc", 0) = "abc"
+	 * Utils.substring("abc", 2) = "c" Utils.substring("abc", 4) =
+	 * "" Utils.substring("abc", -2) = "bc" Utils.substring("abc",
 	 * -4) = "abc"
 	 */
 	public static String substring(String str, int start) {
@@ -380,12 +380,12 @@ public class StrUtil {
 	}
 
 	/**
-	 * 返回由开始位置到结束位置之间的子字符串 StringUtils.substring(null, *, *) = null
-	 * StringUtils.substring("", * , *) = ""; StringUtils.substring("abc", 0, 2)
-	 * = "ab" StringUtils.substring("abc", 2, 0) = ""
-	 * StringUtils.substring("abc", 2, 4) = "c" StringUtils.substring("abc", 4,
-	 * 6) = "" StringUtils.substring("abc", 2, 2) = ""
-	 * StringUtils.substring("abc", -2, -1) = "b" StringUtils.substring("abc",
+	 * 返回由开始位置到结束位置之间的子字符串 Utils.substring(null, *, *) = null
+	 * Utils.substring("", * , *) = ""; Utils.substring("abc", 0, 2)
+	 * = "ab" Utils.substring("abc", 2, 0) = ""
+	 * Utils.substring("abc", 2, 4) = "c" Utils.substring("abc", 4,
+	 * 6) = "" Utils.substring("abc", 2, 2) = ""
+	 * Utils.substring("abc", -2, -1) = "b" Utils.substring("abc",
 	 * -4, 2) = "ab"
 	 */
 	public static String substring(String str, int start, int end) {
@@ -424,14 +424,14 @@ public class StrUtil {
 	}
 
 	/**
-	 * 返回指定字符串之前的所有字符 StringUtils.substringBefore(null, *) = null
-	 * StringUtils.substringBefore("", *) = ""
-	 * StringUtils.substringBefore("abc", "a") = ""
-	 * StringUtils.substringBefore("abcba", "b") = "a"
-	 * StringUtils.substringBefore("abc", "c") = "ab"
-	 * StringUtils.substringBefore("abc", "d") = "abc"
-	 * StringUtils.substringBefore("abc", "") = ""
-	 * StringUtils.substringBefore("abc", null) = "abc"
+	 * 返回指定字符串之前的所有字符 Utils.substringBefore(null, *) = null
+	 * Utils.substringBefore("", *) = ""
+	 * Utils.substringBefore("abc", "a") = ""
+	 * Utils.substringBefore("abcba", "b") = "a"
+	 * Utils.substringBefore("abc", "c") = "ab"
+	 * Utils.substringBefore("abc", "d") = "abc"
+	 * Utils.substringBefore("abc", "") = ""
+	 * Utils.substringBefore("abc", null) = "abc"
 	 */
 	public static String substringBefore(String str, String separator) {
 		if ((str == null) || (separator == null) || (str.length() == 0)) {
@@ -452,13 +452,13 @@ public class StrUtil {
 	}
 
 	/**
-	 * 返回指定字符串之后的所有字符 StringUtils.substringAfter(null, *) = null
-	 * StringUtils.substringAfter("", *) = "" StringUtils.substringAfter(*,
-	 * null) = "" StringUtils.substringAfter("abc", "a") = "bc"
-	 * StringUtils.substringAfter("abcba", "b") = "cba"
-	 * StringUtils.substringAfter("abc", "c") = ""
-	 * StringUtils.substringAfter("abc", "d") = ""
-	 * StringUtils.substringAfter("abc", "") = "abc"
+	 * 返回指定字符串之后的所有字符 Utils.substringAfter(null, *) = null
+	 * Utils.substringAfter("", *) = "" Utils.substringAfter(*,
+	 * null) = "" Utils.substringAfter("abc", "a") = "bc"
+	 * Utils.substringAfter("abcba", "b") = "cba"
+	 * Utils.substringAfter("abc", "c") = ""
+	 * Utils.substringAfter("abc", "d") = ""
+	 * Utils.substringAfter("abc", "") = "abc"
 	 */
 	public static String substringAfter(String str, String separator) {
 		if ((str == null) || (str.length() == 0)) {
@@ -479,14 +479,14 @@ public class StrUtil {
 	}
 
 	/**
-	 * 返回最后一个指定字符串之前的所有字符 StringUtils.substringBeforeLast(null, *) = null
-	 * StringUtils.substringBeforeLast("", *) = ""
-	 * StringUtils.substringBeforeLast("abcba", "b") = "abc"
-	 * StringUtils.substringBeforeLast("abc", "c") = "ab"
-	 * StringUtils.substringBeforeLast("a", "a") = ""
-	 * StringUtils.substringBeforeLast("a", "z") = "a"
-	 * StringUtils.substringBeforeLast("a", null) = "a"
-	 * StringUtils.substringBeforeLast("a", "") = "a"
+	 * 返回最后一个指定字符串之前的所有字符 Utils.substringBeforeLast(null, *) = null
+	 * Utils.substringBeforeLast("", *) = ""
+	 * Utils.substringBeforeLast("abcba", "b") = "abc"
+	 * Utils.substringBeforeLast("abc", "c") = "ab"
+	 * Utils.substringBeforeLast("a", "a") = ""
+	 * Utils.substringBeforeLast("a", "z") = "a"
+	 * Utils.substringBeforeLast("a", null) = "a"
+	 * Utils.substringBeforeLast("a", "") = "a"
 	 */
 	public static String substringBeforeLast(String str, String separator) {
 		if ((str == null) || (separator == null) || (str.length() == 0)
@@ -504,15 +504,15 @@ public class StrUtil {
 	}
 
 	/**
-	 * 返回最后一个指定字符串之后的所有字符 StringUtils.substringAfterLast(null, *) = null
-	 * StringUtils.substringAfterLast("", *) = ""
-	 * StringUtils.substringAfterLast(*, "") = ""
-	 * StringUtils.substringAfterLast(*, null) = ""
-	 * StringUtils.substringAfterLast("abc", "a") = "bc"
-	 * StringUtils.substringAfterLast("abcba", "b") = "a"
-	 * StringUtils.substringAfterLast("abc", "c") = ""
-	 * StringUtils.substringAfterLast("a", "a") = ""
-	 * StringUtils.substringAfterLast("a", "z") = ""
+	 * 返回最后一个指定字符串之后的所有字符 Utils.substringAfterLast(null, *) = null
+	 * Utils.substringAfterLast("", *) = ""
+	 * Utils.substringAfterLast(*, "") = ""
+	 * Utils.substringAfterLast(*, null) = ""
+	 * Utils.substringAfterLast("abc", "a") = "bc"
+	 * Utils.substringAfterLast("abcba", "b") = "a"
+	 * Utils.substringAfterLast("abc", "c") = ""
+	 * Utils.substringAfterLast("a", "a") = ""
+	 * Utils.substringAfterLast("a", "z") = ""
 	 */
 	public static String substringAfterLast(String str, String separator) {
 		if ((str == null) || (str.length() == 0)) {
@@ -536,10 +536,10 @@ public class StrUtil {
 	 * 转换首字母小写，
 	 * 
 	 * @param str
-	 *            StringUtils.uncapitalize(null) = null
-	 *            StringUtils.uncapitalize("") = ""
-	 *            StringUtils.uncapitalize("Cat") = "cat"
-	 *            StringUtils.uncapitalize("CAT") = "cAT"
+	 *            Utils.uncapitalize(null) = null
+	 *            Utils.uncapitalize("") = ""
+	 *            Utils.uncapitalize("Cat") = "cat"
+	 *            Utils.uncapitalize("CAT") = "cAT"
 	 */
 	public static String uncapitalize(String str) {
 		int strLen;
@@ -564,11 +564,11 @@ public class StrUtil {
 	 * </p>
 	 * 
 	 * <pre>
-	 *  StringUtils.trimToNull(null)          = null
-	 *  StringUtils.trimToNull(&quot;&quot;)            = null
-	 *  StringUtils.trimToNull(&quot;     &quot;)       = null
-	 *  StringUtils.trimToNull(&quot;abc&quot;)         = &quot;abc&quot;
-	 *  StringUtils.trimToNull(&quot;    abc    &quot;) = &quot;abc&quot;
+	 *  Utils.trimToNull(null)          = null
+	 *  Utils.trimToNull(&quot;&quot;)            = null
+	 *  Utils.trimToNull(&quot;     &quot;)       = null
+	 *  Utils.trimToNull(&quot;abc&quot;)         = &quot;abc&quot;
+	 *  Utils.trimToNull(&quot;    abc    &quot;) = &quot;abc&quot;
 	 * </pre>
 	 * 
 	 * @param str
@@ -599,11 +599,11 @@ public class StrUtil {
 	 * </p>
 	 * 
 	 * <pre>
-	 *  StringUtils.trimToEmpty(null)          = &quot;&quot;
-	 *  StringUtils.trimToEmpty(&quot;&quot;)            = &quot;&quot;
-	 *  StringUtils.trimToEmpty(&quot;     &quot;)       = &quot;&quot;
-	 *  StringUtils.trimToEmpty(&quot;abc&quot;)         = &quot;abc&quot;
-	 *  StringUtils.trimToEmpty(&quot;    abc    &quot;) = &quot;abc&quot;
+	 *  Utils.trimToEmpty(null)          = &quot;&quot;
+	 *  Utils.trimToEmpty(&quot;&quot;)            = &quot;&quot;
+	 *  Utils.trimToEmpty(&quot;     &quot;)       = &quot;&quot;
+	 *  Utils.trimToEmpty(&quot;abc&quot;)         = &quot;abc&quot;
+	 *  Utils.trimToEmpty(&quot;    abc    &quot;) = &quot;abc&quot;
 	 * </pre>
 	 * 
 	 * @param str
@@ -636,14 +636,14 @@ public class StrUtil {
 	 * </p>
 	 * 
 	 * <pre>
-	 *  StringUtils.strip(null)     = null
-	 *  StringUtils.strip(&quot;&quot;)       = &quot;&quot;
-	 *  StringUtils.strip(&quot;   &quot;)    = &quot;&quot;
-	 *  StringUtils.strip(&quot;abc&quot;)    = &quot;abc&quot;
-	 *  StringUtils.strip(&quot;  abc&quot;)  = &quot;abc&quot;
-	 *  StringUtils.strip(&quot;abc  &quot;)  = &quot;abc&quot;
-	 *  StringUtils.strip(&quot; abc &quot;)  = &quot;abc&quot;
-	 *  StringUtils.strip(&quot; ab c &quot;) = &quot;ab c&quot;
+	 *  Utils.strip(null)     = null
+	 *  Utils.strip(&quot;&quot;)       = &quot;&quot;
+	 *  Utils.strip(&quot;   &quot;)    = &quot;&quot;
+	 *  Utils.strip(&quot;abc&quot;)    = &quot;abc&quot;
+	 *  Utils.strip(&quot;  abc&quot;)  = &quot;abc&quot;
+	 *  Utils.strip(&quot;abc  &quot;)  = &quot;abc&quot;
+	 *  Utils.strip(&quot; abc &quot;)  = &quot;abc&quot;
+	 *  Utils.strip(&quot; ab c &quot;) = &quot;ab c&quot;
 	 * </pre>
 	 * 
 	 * @param str
@@ -666,14 +666,14 @@ public class StrUtil {
 	 * </p>
 	 * 
 	 * <pre>
-	 *  StringUtils.strip(null)     = null
-	 *  StringUtils.strip(&quot;&quot;)       = null
-	 *  StringUtils.strip(&quot;   &quot;)    = null
-	 *  StringUtils.strip(&quot;abc&quot;)    = &quot;abc&quot;
-	 *  StringUtils.strip(&quot;  abc&quot;)  = &quot;abc&quot;
-	 *  StringUtils.strip(&quot;abc  &quot;)  = &quot;abc&quot;
-	 *  StringUtils.strip(&quot; abc &quot;)  = &quot;abc&quot;
-	 *  StringUtils.strip(&quot; ab c &quot;) = &quot;ab c&quot;
+	 *  Utils.strip(null)     = null
+	 *  Utils.strip(&quot;&quot;)       = null
+	 *  Utils.strip(&quot;   &quot;)    = null
+	 *  Utils.strip(&quot;abc&quot;)    = &quot;abc&quot;
+	 *  Utils.strip(&quot;  abc&quot;)  = &quot;abc&quot;
+	 *  Utils.strip(&quot;abc  &quot;)  = &quot;abc&quot;
+	 *  Utils.strip(&quot; abc &quot;)  = &quot;abc&quot;
+	 *  Utils.strip(&quot; ab c &quot;) = &quot;ab c&quot;
 	 * </pre>
 	 * 
 	 * @param str
@@ -702,14 +702,14 @@ public class StrUtil {
 	 * </p>
 	 * 
 	 * <pre>
-	 *  StringUtils.strip(null)     = &quot;&quot;
-	 *  StringUtils.strip(&quot;&quot;)       = &quot;&quot;
-	 *  StringUtils.strip(&quot;   &quot;)    = &quot;&quot;
-	 *  StringUtils.strip(&quot;abc&quot;)    = &quot;abc&quot;
-	 *  StringUtils.strip(&quot;  abc&quot;)  = &quot;abc&quot;
-	 *  StringUtils.strip(&quot;abc  &quot;)  = &quot;abc&quot;
-	 *  StringUtils.strip(&quot; abc &quot;)  = &quot;abc&quot;
-	 *  StringUtils.strip(&quot; ab c &quot;) = &quot;ab c&quot;
+	 *  Utils.strip(null)     = &quot;&quot;
+	 *  Utils.strip(&quot;&quot;)       = &quot;&quot;
+	 *  Utils.strip(&quot;   &quot;)    = &quot;&quot;
+	 *  Utils.strip(&quot;abc&quot;)    = &quot;abc&quot;
+	 *  Utils.strip(&quot;  abc&quot;)  = &quot;abc&quot;
+	 *  Utils.strip(&quot;abc  &quot;)  = &quot;abc&quot;
+	 *  Utils.strip(&quot; abc &quot;)  = &quot;abc&quot;
+	 *  Utils.strip(&quot; ab c &quot;) = &quot;ab c&quot;
 	 * </pre>
 	 * 
 	 * @param str
@@ -740,13 +740,13 @@ public class StrUtil {
 	 * </p>
 	 * 
 	 * <pre>
-	 *  StringUtils.strip(null, *)          = null
-	 *  StringUtils.strip(&quot;&quot;, *)            = &quot;&quot;
-	 *  StringUtils.strip(&quot;abc&quot;, null)      = &quot;abc&quot;
-	 *  StringUtils.strip(&quot;  abc&quot;, null)    = &quot;abc&quot;
-	 *  StringUtils.strip(&quot;abc  &quot;, null)    = &quot;abc&quot;
-	 *  StringUtils.strip(&quot; abc &quot;, null)    = &quot;abc&quot;
-	 *  StringUtils.strip(&quot;  abcyx&quot;, &quot;xyz&quot;) = &quot;  abc&quot;
+	 *  Utils.strip(null, *)          = null
+	 *  Utils.strip(&quot;&quot;, *)            = &quot;&quot;
+	 *  Utils.strip(&quot;abc&quot;, null)      = &quot;abc&quot;
+	 *  Utils.strip(&quot;  abc&quot;, null)    = &quot;abc&quot;
+	 *  Utils.strip(&quot;abc  &quot;, null)    = &quot;abc&quot;
+	 *  Utils.strip(&quot; abc &quot;, null)    = &quot;abc&quot;
+	 *  Utils.strip(&quot;  abcyx&quot;, &quot;xyz&quot;) = &quot;  abc&quot;
 	 * </pre>
 	 * 
 	 * @param str
@@ -779,14 +779,14 @@ public class StrUtil {
 	 * </p>
 	 * 
 	 * <pre>
-	 *  StringUtils.stripStart(null, *)          = null
-	 *  StringUtils.stripStart(&quot;&quot;, *)            = &quot;&quot;
-	 *  StringUtils.stripStart(&quot;abc&quot;, &quot;&quot;)        = &quot;abc&quot;
-	 *  StringUtils.stripStart(&quot;abc&quot;, null)      = &quot;abc&quot;
-	 *  StringUtils.stripStart(&quot;  abc&quot;, null)    = &quot;abc&quot;
-	 *  StringUtils.stripStart(&quot;abc  &quot;, null)    = &quot;abc  &quot;
-	 *  StringUtils.stripStart(&quot; abc &quot;, null)    = &quot;abc &quot;
-	 *  StringUtils.stripStart(&quot;yxabc  &quot;, &quot;xyz&quot;) = &quot;abc  &quot;
+	 *  Utils.stripStart(null, *)          = null
+	 *  Utils.stripStart(&quot;&quot;, *)            = &quot;&quot;
+	 *  Utils.stripStart(&quot;abc&quot;, &quot;&quot;)        = &quot;abc&quot;
+	 *  Utils.stripStart(&quot;abc&quot;, null)      = &quot;abc&quot;
+	 *  Utils.stripStart(&quot;  abc&quot;, null)    = &quot;abc&quot;
+	 *  Utils.stripStart(&quot;abc  &quot;, null)    = &quot;abc  &quot;
+	 *  Utils.stripStart(&quot; abc &quot;, null)    = &quot;abc &quot;
+	 *  Utils.stripStart(&quot;yxabc  &quot;, &quot;xyz&quot;) = &quot;abc  &quot;
 	 * </pre>
 	 * 
 	 * @param str
@@ -833,14 +833,14 @@ public class StrUtil {
 	 * </p>
 	 * 
 	 * <pre>
-	 *  StringUtils.stripEnd(null, *)          = null
-	 *  StringUtils.stripEnd(&quot;&quot;, *)            = &quot;&quot;
-	 *  StringUtils.stripEnd(&quot;abc&quot;, &quot;&quot;)        = &quot;abc&quot;
-	 *  StringUtils.stripEnd(&quot;abc&quot;, null)      = &quot;abc&quot;
-	 *  StringUtils.stripEnd(&quot;  abc&quot;, null)    = &quot;  abc&quot;
-	 *  StringUtils.stripEnd(&quot;abc  &quot;, null)    = &quot;abc&quot;
-	 *  StringUtils.stripEnd(&quot; abc &quot;, null)    = &quot; abc&quot;
-	 *  StringUtils.stripEnd(&quot;  abcyx&quot;, &quot;xyz&quot;) = &quot;  abc&quot;
+	 *  Utils.stripEnd(null, *)          = null
+	 *  Utils.stripEnd(&quot;&quot;, *)            = &quot;&quot;
+	 *  Utils.stripEnd(&quot;abc&quot;, &quot;&quot;)        = &quot;abc&quot;
+	 *  Utils.stripEnd(&quot;abc&quot;, null)      = &quot;abc&quot;
+	 *  Utils.stripEnd(&quot;  abc&quot;, null)    = &quot;  abc&quot;
+	 *  Utils.stripEnd(&quot;abc  &quot;, null)    = &quot;abc&quot;
+	 *  Utils.stripEnd(&quot; abc &quot;, null)    = &quot; abc&quot;
+	 *  Utils.stripEnd(&quot;  abcyx&quot;, &quot;xyz&quot;) = &quot;  abc&quot;
 	 * </pre>
 	 * 
 	 * @param str
@@ -885,10 +885,10 @@ public class StrUtil {
 	 * </p>
 	 * 
 	 * <pre>
-	 *  StringUtils.stripAll(null)             = null
-	 *  StringUtils.stripAll([])               = []
-	 *  StringUtils.stripAll([&quot;abc&quot;, &quot;  abc&quot;]) = [&quot;abc&quot;, &quot;abc&quot;]
-	 *  StringUtils.stripAll([&quot;abc  &quot;, null])  = [&quot;abc&quot;, null]
+	 *  Utils.stripAll(null)             = null
+	 *  Utils.stripAll([])               = []
+	 *  Utils.stripAll([&quot;abc&quot;, &quot;  abc&quot;]) = [&quot;abc&quot;, &quot;abc&quot;]
+	 *  Utils.stripAll([&quot;abc  &quot;, null])  = [&quot;abc&quot;, null]
 	 * </pre>
 	 * 
 	 * @param strs
@@ -915,12 +915,12 @@ public class StrUtil {
 	 * </p>
 	 * 
 	 * <pre>
-	 *  StringUtils.stripAll(null, *)                = null
-	 *  StringUtils.stripAll([], *)                  = []
-	 *  StringUtils.stripAll([&quot;abc&quot;, &quot;  abc&quot;], null) = [&quot;abc&quot;, &quot;abc&quot;]
-	 *  StringUtils.stripAll([&quot;abc  &quot;, null], null)  = [&quot;abc&quot;, null]
-	 *  StringUtils.stripAll([&quot;abc  &quot;, null], &quot;yz&quot;)  = [&quot;abc  &quot;, null]
-	 *  StringUtils.stripAll([&quot;yabcz&quot;, null], &quot;yz&quot;)  = [&quot;abc&quot;, null]
+	 *  Utils.stripAll(null, *)                = null
+	 *  Utils.stripAll([], *)                  = []
+	 *  Utils.stripAll([&quot;abc&quot;, &quot;  abc&quot;], null) = [&quot;abc&quot;, &quot;abc&quot;]
+	 *  Utils.stripAll([&quot;abc  &quot;, null], null)  = [&quot;abc&quot;, null]
+	 *  Utils.stripAll([&quot;abc  &quot;, null], &quot;yz&quot;)  = [&quot;abc  &quot;, null]
+	 *  Utils.stripAll([&quot;yabcz&quot;, null], &quot;yz&quot;)  = [&quot;abc&quot;, null]
 	 * </pre>
 	 * 
 	 * @param strs
@@ -954,10 +954,10 @@ public class StrUtil {
 	 * </p>
 	 * 
 	 * <pre>
-	 *  StringUtils.indexOf(null, *)         = -1
-	 *  StringUtils.indexOf(&quot;&quot;, *)           = -1
-	 *  StringUtils.indexOf(&quot;aabaabaa&quot;, 'a') = 0
-	 *  StringUtils.indexOf(&quot;aabaabaa&quot;, 'b') = 2
+	 *  Utils.indexOf(null, *)         = -1
+	 *  Utils.indexOf(&quot;&quot;, *)           = -1
+	 *  Utils.indexOf(&quot;aabaabaa&quot;, 'a') = 0
+	 *  Utils.indexOf(&quot;aabaabaa&quot;, 'b') = 2
 	 * </pre>
 	 * 
 	 * @param str
@@ -988,12 +988,12 @@ public class StrUtil {
 	 * </p>
 	 * 
 	 * <pre>
-	 *  StringUtils.indexOf(null, *, *)          = -1
-	 *  StringUtils.indexOf(&quot;&quot;, *, *)            = -1
-	 *  StringUtils.indexOf(&quot;aabaabaa&quot;, 'b', 0)  = 2
-	 *  StringUtils.indexOf(&quot;aabaabaa&quot;, 'b', 3)  = 5
-	 *  StringUtils.indexOf(&quot;aabaabaa&quot;, 'b', 9)  = -1
-	 *  StringUtils.indexOf(&quot;aabaabaa&quot;, 'b', -1) = 2
+	 *  Utils.indexOf(null, *, *)          = -1
+	 *  Utils.indexOf(&quot;&quot;, *, *)            = -1
+	 *  Utils.indexOf(&quot;aabaabaa&quot;, 'b', 0)  = 2
+	 *  Utils.indexOf(&quot;aabaabaa&quot;, 'b', 3)  = 5
+	 *  Utils.indexOf(&quot;aabaabaa&quot;, 'b', 9)  = -1
+	 *  Utils.indexOf(&quot;aabaabaa&quot;, 'b', -1) = 2
 	 * </pre>
 	 * 
 	 * @param str
@@ -1026,10 +1026,10 @@ public class StrUtil {
 	 * </p>
 	 * 
 	 * <pre>
-	 *  StringUtils.lastIndexOf(null, *)         = -1
-	 *  StringUtils.lastIndexOf(&quot;&quot;, *)           = -1
-	 *  StringUtils.lastIndexOf(&quot;aabaabaa&quot;, 'a') = 7
-	 *  StringUtils.lastIndexOf(&quot;aabaabaa&quot;, 'b') = 5
+	 *  Utils.lastIndexOf(null, *)         = -1
+	 *  Utils.lastIndexOf(&quot;&quot;, *)           = -1
+	 *  Utils.lastIndexOf(&quot;aabaabaa&quot;, 'a') = 7
+	 *  Utils.lastIndexOf(&quot;aabaabaa&quot;, 'b') = 5
 	 * </pre>
 	 * 
 	 * @param str
@@ -1060,14 +1060,14 @@ public class StrUtil {
 	 * </p>
 	 * 
 	 * <pre>
-	 *  StringUtils.lastIndexOf(null, *, *)          = -1
-	 *  StringUtils.lastIndexOf(&quot;&quot;, *,  *)           = -1
-	 *  StringUtils.lastIndexOf(&quot;aabaabaa&quot;, 'b', 8)  = 5
-	 *  StringUtils.lastIndexOf(&quot;aabaabaa&quot;, 'b', 4)  = 2
-	 *  StringUtils.lastIndexOf(&quot;aabaabaa&quot;, 'b', 0)  = -1
-	 *  StringUtils.lastIndexOf(&quot;aabaabaa&quot;, 'b', 9)  = 5
-	 *  StringUtils.lastIndexOf(&quot;aabaabaa&quot;, 'b', -1) = -1
-	 *  StringUtils.lastIndexOf(&quot;aabaabaa&quot;, 'a', 0)  = 0
+	 *  Utils.lastIndexOf(null, *, *)          = -1
+	 *  Utils.lastIndexOf(&quot;&quot;, *,  *)           = -1
+	 *  Utils.lastIndexOf(&quot;aabaabaa&quot;, 'b', 8)  = 5
+	 *  Utils.lastIndexOf(&quot;aabaabaa&quot;, 'b', 4)  = 2
+	 *  Utils.lastIndexOf(&quot;aabaabaa&quot;, 'b', 0)  = -1
+	 *  Utils.lastIndexOf(&quot;aabaabaa&quot;, 'b', 9)  = 5
+	 *  Utils.lastIndexOf(&quot;aabaabaa&quot;, 'b', -1) = -1
+	 *  Utils.lastIndexOf(&quot;aabaabaa&quot;, 'a', 0)  = 0
 	 * </pre>
 	 * 
 	 * @param str
@@ -1098,13 +1098,13 @@ public class StrUtil {
 	 * </p>
 	 * 
 	 * <pre>
-	 *  StringUtils.lastIndexOf(null, *)          = -1
-	 *  StringUtils.lastIndexOf(*, null)          = -1
-	 *  StringUtils.lastIndexOf(&quot;&quot;, &quot;&quot;)           = 0
-	 *  StringUtils.lastIndexOf(&quot;aabaabaa&quot;, &quot;a&quot;)  = 0
-	 *  StringUtils.lastIndexOf(&quot;aabaabaa&quot;, &quot;b&quot;)  = 2
-	 *  StringUtils.lastIndexOf(&quot;aabaabaa&quot;, &quot;ab&quot;) = 1
-	 *  StringUtils.lastIndexOf(&quot;aabaabaa&quot;, &quot;&quot;)   = 8
+	 *  Utils.lastIndexOf(null, *)          = -1
+	 *  Utils.lastIndexOf(*, null)          = -1
+	 *  Utils.lastIndexOf(&quot;&quot;, &quot;&quot;)           = 0
+	 *  Utils.lastIndexOf(&quot;aabaabaa&quot;, &quot;a&quot;)  = 0
+	 *  Utils.lastIndexOf(&quot;aabaabaa&quot;, &quot;b&quot;)  = 2
+	 *  Utils.lastIndexOf(&quot;aabaabaa&quot;, &quot;ab&quot;) = 1
+	 *  Utils.lastIndexOf(&quot;aabaabaa&quot;, &quot;&quot;)   = 8
 	 * </pre>
 	 * 
 	 * @param str
@@ -1136,15 +1136,15 @@ public class StrUtil {
 	 * </p>
 	 * 
 	 * <pre>
-	 *  StringUtils.lastIndexOf(null, *, *)          = -1
-	 *  StringUtils.lastIndexOf(*, null, *)          = -1
-	 *  StringUtils.lastIndexOf(&quot;aabaabaa&quot;, &quot;a&quot;, 8)  = 7
-	 *  StringUtils.lastIndexOf(&quot;aabaabaa&quot;, &quot;b&quot;, 8)  = 5
-	 *  StringUtils.lastIndexOf(&quot;aabaabaa&quot;, &quot;ab&quot;, 8) = 4
-	 *  StringUtils.lastIndexOf(&quot;aabaabaa&quot;, &quot;b&quot;, 9)  = 5
-	 *  StringUtils.lastIndexOf(&quot;aabaabaa&quot;, &quot;b&quot;, -1) = -1
-	 *  StringUtils.lastIndexOf(&quot;aabaabaa&quot;, &quot;a&quot;, 0)  = 0
-	 *  StringUtils.lastIndexOf(&quot;aabaabaa&quot;, &quot;b&quot;, 0)  = -1
+	 *  Utils.lastIndexOf(null, *, *)          = -1
+	 *  Utils.lastIndexOf(*, null, *)          = -1
+	 *  Utils.lastIndexOf(&quot;aabaabaa&quot;, &quot;a&quot;, 8)  = 7
+	 *  Utils.lastIndexOf(&quot;aabaabaa&quot;, &quot;b&quot;, 8)  = 5
+	 *  Utils.lastIndexOf(&quot;aabaabaa&quot;, &quot;ab&quot;, 8) = 4
+	 *  Utils.lastIndexOf(&quot;aabaabaa&quot;, &quot;b&quot;, 9)  = 5
+	 *  Utils.lastIndexOf(&quot;aabaabaa&quot;, &quot;b&quot;, -1) = -1
+	 *  Utils.lastIndexOf(&quot;aabaabaa&quot;, &quot;a&quot;, 0)  = 0
+	 *  Utils.lastIndexOf(&quot;aabaabaa&quot;, &quot;b&quot;, 0)  = -1
 	 * </pre>
 	 * 
 	 * @param str
@@ -1177,10 +1177,10 @@ public class StrUtil {
 	 * </p>
 	 * 
 	 * <pre>
-	 *  StringUtils.contains(null, *)    = false
-	 *  StringUtils.contains(&quot;&quot;, *)      = false
-	 *  StringUtils.contains(&quot;abc&quot;, 'a') = true
-	 *  StringUtils.contains(&quot;abc&quot;, 'z') = false
+	 *  Utils.contains(null, *)    = false
+	 *  Utils.contains(&quot;&quot;, *)      = false
+	 *  Utils.contains(&quot;abc&quot;, 'a') = true
+	 *  Utils.contains(&quot;abc&quot;, 'z') = false
 	 * </pre>
 	 * 
 	 * @param str
@@ -1209,12 +1209,12 @@ public class StrUtil {
 	 * </p>
 	 * 
 	 * <pre>
-	 *  StringUtils.contains(null, *)     = false
-	 *  StringUtils.contains(*, null)     = false
-	 *  StringUtils.contains(&quot;&quot;, &quot;&quot;)      = true
-	 *  StringUtils.contains(&quot;abc&quot;, &quot;&quot;)   = true
-	 *  StringUtils.contains(&quot;abc&quot;, &quot;a&quot;)  = true
-	 *  StringUtils.contains(&quot;abc&quot;, &quot;z&quot;)  = false
+	 *  Utils.contains(null, *)     = false
+	 *  Utils.contains(*, null)     = false
+	 *  Utils.contains(&quot;&quot;, &quot;&quot;)      = true
+	 *  Utils.contains(&quot;abc&quot;, &quot;&quot;)   = true
+	 *  Utils.contains(&quot;abc&quot;, &quot;a&quot;)  = true
+	 *  Utils.contains(&quot;abc&quot;, &quot;z&quot;)  = false
 	 * </pre>
 	 * 
 	 * @param str

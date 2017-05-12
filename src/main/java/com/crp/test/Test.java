@@ -12,10 +12,10 @@ import java.util.regex.Pattern;
 public class Test {
 
     public static void  main(String args[]){
-
-        String str = "ww";
-        String s[] = str.split(",");
-        System.out.println(s[0]);
+        int a = -1;
+        if((a=1024) != -1){
+            System.out.println(1);
+        }
 
 
     }
