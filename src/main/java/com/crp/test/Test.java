@@ -1,7 +1,6 @@
 package com.crp.test;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import com.crp.dateTime.DateTimeUtils;
 
 /**
  * ms-util - com.crp.test
@@ -13,9 +12,9 @@ public class Test {
 
     public static void  main(String args[]){
 
-        String str = "ww";
-        String s[] = str.split(",");
-        System.out.println(s[0]);
+        String ss = "2017-07-19 23:59:50";
+        String sss = DateTimeUtils.getAfterNMinuteDate(ss,10);
+        System.out.println(sss);
 
 
     }
