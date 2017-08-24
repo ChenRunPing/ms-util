@@ -1,5 +1,8 @@
 package com.crp.dateTime;
 
+import lombok.extern.slf4j.Slf4j;
+
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -9,6 +12,7 @@ import java.util.Calendar;
  * @author superChen
  * @create 2017-01-13 16:43
  */
+@Slf4j
 public class DateTimeUtils {
 
     /**
@@ -25,6 +29,28 @@ public class DateTimeUtils {
         return date;
     }
 
+    public static String getAfterNDayDate(String dateString , int beforeDays){
+        SimpleDateFormat   sdf   =   new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Calendar   cal1   =   Calendar.getInstance();
+        try {
+            cal1.setTime(sdf.parse(dateString));
+        } catch (ParseException e) {
+            log.error("格式化日期发生异常，日期:"+dateString);
+        }
+        cal1.add(Calendar.DATE,beforeDays);
+        return sdf.format(cal1.getTime());
+    }
 
+    public static String getAfterNMinuteDate(String dateString , int afterMinutes){
+        SimpleDateFormat   sdf   =   new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Calendar   cal1   =   Calendar.getInstance();
+        try {
+            cal1.setTime(sdf.parse(dateString));
+        } catch (ParseException e) {
+            log.error("格式化日期发生异常，日期:"+dateString);
+        }
+        cal1.add(Calendar.MINUTE,afterMinutes);
+        return sdf.format(cal1.getTime());
+    }
 
 }
