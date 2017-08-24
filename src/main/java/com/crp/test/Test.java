@@ -12,9 +12,9 @@ public class Test {
 
     public static void  main(String args[]){
 
-        String ss = "2017-07-19 23:59:50";
-        String sss = DateTimeUtils.getAfterNMinuteDate(ss,10);
-        System.out.println(sss);
+        double a = 1.020;
+        double b = 1.220;
+        System.out.println(a*2+b*1);
 
 
     }
